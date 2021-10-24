@@ -74,6 +74,8 @@ def coomparar_matriz(c1, c2, mat_real, mat_incognita):
         mat_incognita[c1f][c1c] = 0
         mat_incognita[c2f][c2c] = 0
         imprimir_matriz(mat_incognita)
+    else:
+        print("¡Correcto!")
 
 
 def jugar(mat_real, mat_incognita):

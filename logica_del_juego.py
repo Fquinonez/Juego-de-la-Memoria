@@ -2,22 +2,7 @@
 import random
 from os import system
 from time import sleep
-
-
-# Recursividad, listas, rebanadas
-def imprimir_lista(lista):
-    if len(lista) > 0:
-        print("%5d" % lista[0], end=" ")
-        imprimir_lista(lista[1:])
-
-
-# Recursividad, matrices, rebanadas
-def imprimir_matriz(matriz):
-    # TODO: Imprimir coordenadas
-    if len(matriz) > 0:
-        imprimir_lista(matriz[0])
-        print("")
-        imprimir_matriz(matriz[1:])
+from interfaz_grafica import imprimir_matriz
 
 
 # Matrices
@@ -105,16 +90,3 @@ def jugar(mat_real, mat_incognita):
         editar_matriz(interpretar_coordenadas(c2), mat_real, mat_incognita)
         # Coomparo resultados
         coomparar_matriz(interpretar_coordenadas(c1), interpretar_coordenadas(c2), mat_real, mat_incognita)
-
-
-# Programa principal
-
-# Generar matriz real
-mat_real = barajar_cartas(4)
-mat_incognita = generar_vacio(4)
-
-# Imprimir matriz incognita
-imprimir_matriz(mat_incognita)
-
-# Jugar
-jugar(mat_real, mat_incognita)

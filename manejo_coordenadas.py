@@ -1,4 +1,4 @@
-# Listas, diccionarios, diccionario por comprensión
+# Listas, diccionarios, diccionario por comprensión, tuplas, excepciones
 def interpretar_coordenadas(coord):
     '''Recibe una cadena de coordendas alfanumerica,
     las interpreta en numeros y las devuelve en forma de tupla'''
@@ -12,7 +12,11 @@ def interpretar_coordenadas(coord):
     # Creo un diccionario para interpretar a
     letras = ["a", "b", "c", "d", "e", "f", "g", "h"]
     dic_letras = {letras[num]: num for num in range(8)}
-    return (dic_letras[a], b - 1)
+    try:
+        coordenadas = (dic_letras[a], b - 1)
+    except KeyError:
+        coordenadas = (9, 9)
+    return coordenadas
 
 
 def limpiar_coordenadas(coord):

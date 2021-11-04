@@ -15,6 +15,7 @@ def jugada(jugadas_anteriores, valor_maximo):
 def jugar(mat_real, mat_incognita):
     valores_ingresados = []
     val_max = len(mat_real)
+    movimientos = 0
     while 0 in [item for fila in mat_incognita for item in fila]:
         # Ingresar coordenadas
         c1 = jugada(valores_ingresados, val_max)
@@ -29,6 +30,24 @@ def jugar(mat_real, mat_incognita):
         # Editar matriz
         system("cls")
         editar_matriz(c2, mat_real, mat_incognita)
+        # Contar movimientos
+        movimientos = movimientos + 1
         # Coomparo resultados
         if comparar_matriz(c1, c2, mat_real, mat_incognita):
             valores_ingresados.extend([c1, c2])
+    return movimientos
+
+
+def configurar_juego():
+    jugador = input("Nombre del jugador= ")
+    dificultad = input("Nivel de dificultad (Facil = 4x4 / Medio = 6x6 / Dificil = 8x8) = ")
+    while dificultad.lower() != 'facil' and dificultad.lower() != 'medio' and dificultad.lower() != 'dificil':
+        print("Debe ingresar una dificultad correcta.")
+        dificultad = input("Nivel de dificultad( Facil= 4x4 / Medio= 6x6 / Dificil= 8x8)= ")
+    if dificultad.lower() == 'facil':
+        nivel = 4
+    if dificultad.lower() == 'medio':
+        nivel = 6
+    if dificultad.lower() == 'dificil':
+        nivel = 8
+    return int(nivel), jugador, dificultad

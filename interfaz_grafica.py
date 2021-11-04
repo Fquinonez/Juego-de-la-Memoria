@@ -1,3 +1,6 @@
+from os import system
+
+
 # Recursividad, listas, rebanadas
 def imprimir_lista(lista):
     if len(lista) > 0:
@@ -5,6 +8,7 @@ def imprimir_lista(lista):
         imprimir_lista(lista[1:])
 
 
+# Recursividad
 def imprimir_lista_color(lista):
     azul = '\033[94m'
     blanco = '\033[0m'
@@ -30,3 +34,18 @@ def imprimir_matriz(matriz):
     imprimir_lista_color([num for num in range(len(matriz) + 1)])
     print()
     imprimir_lista_string(matriz)
+
+
+def bienvenida():
+    bienvenida = '¡¡Bienvenid@ al juego de la MEMORIA!!'
+    print(bienvenida.center(50, ' '))
+    print()
+    print("Para comprender el juego, puede leer\nel archivo txt llamado 'instructivo de juego MEMORIA.txt' con las\nreglas e instrucciones del juego.")
+    print()
+    print("¿Estas list@ para jugar? ¡Mucha suerte!")
+    print()
+    print("Aqui vamos...")
+    print()
+    print()
+    input("Presione enter para continuar.")
+    system("cls")

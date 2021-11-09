@@ -19,9 +19,10 @@ def interpretar_coordenadas(coord):
     return coordenadas
 
 
+# Listas por comprension
 def limpiar_coordenadas(coord):
     '''Elimina espacios y caracteres no alfanumericos
-    del sting que se pasa como parametro.
+    del string que se pasa como parametro.
     Devuelve un string con los caracteres restantes.'''
     coord = coord.lower()
     coord_l = "".join([caracter for caracter in coord if caracter.isalnum()])
@@ -30,7 +31,11 @@ def limpiar_coordenadas(coord):
 
 def ingresar_coordenadas(valor_maximo):
     '''El usuario ingresa coordenadas por teclado en
-    formato string'''
+    formato string. Devuelve string.
+    Datos de entrada:
+        valor_maximo: Entero
+    Datos de salida:
+        coord: String'''
     msj_error = "Las coordenadas ingresadas son incorrectas.\nEl formato es, por ejemplo, 'A1'."
     coord = input("Ingrese las coordenadas: ")
     # Paso los caracteres a minúsculas, elimino valores no alfanumericos

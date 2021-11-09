@@ -1,0 +1,11 @@
+Este es un juego de la memoria en donde el principal objetivo,es encontrar los pares.
+
+Instrucciones:
+1)  Debe ingresar su nombre.
+2)  Debe elegir la dificultad, escribiendo facil, medio o dificil.
+3)  Solo se podran ingresar datos alfanumericos como coordenadas. Por ejemplo: "a1"
+4)  Para ver su resultado, debe abrir el archivo que se creara al finalizar el juego (resultado_final.txt).
+
+Reglas:
+1) No pueden repetir las coordenadas en una misma ronda.
+2) No puede seleccionar casilleros que ya hayan sido adivinados.

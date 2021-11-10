@@ -63,9 +63,7 @@ def comparar_matriz(c1, c2, mat_incognita):
     c1f, c1c = c1
     c2f, c2c = c2
     if mat_incognita[c1f][c1c] != mat_incognita[c2f][c2c]:
-        print()
-        print("¡Incorrecto!")
-        print()
+        print("\n¡Incorrecto!")
         sleep(3)
         system("cls")
         mat_incognita[c1f][c1c] = 0
@@ -73,7 +71,5 @@ def comparar_matriz(c1, c2, mat_incognita):
         imprimir_matriz(mat_incognita)
         return False
     else:
-        print()
-        print("¡Correcto!")
-        print()
+        print("\n¡Correcto!")
         return True

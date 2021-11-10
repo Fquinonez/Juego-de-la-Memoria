@@ -55,10 +55,10 @@ def bienvenida():
     print("Aqui vamos...")
     print()
     print()
-    while opcion != 2:
+    while opcion != "2":
         print("1. Instrucciones del juego")
         print("2. Continuar")
-        opcion = int(input("Seleccione una opción."))
-        if opcion == 1:
+        opcion = input("Seleccione una opción.")
+        if opcion == "1":
             imprimir_instrucciones()
     system("cls")

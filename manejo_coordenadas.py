@@ -36,7 +36,7 @@ def ingresar_coordenadas(valor_maximo):
     Datos de salida:
         coord: String'''
     msj_error = "Las coordenadas ingresadas son incorrectas.\nEl formato es, por ejemplo, 'A1'."
-    coord = input("Ingrese las coordenadas: ")
+    coord = input("\nIngrese las coordenadas: ")
     # Paso los caracteres a minúsculas, elimino valores no alfanumericos
     coord = limpiar_coordenadas(coord)
     # Valido que las coordenadas tengan dos digitos
@@ -51,7 +51,6 @@ def ingresar_coordenadas(valor_maximo):
     c = interpretar_coordenadas(coord)
     c1, c2 = c
     if c1 not in range(0, valor_maximo) or c2 not in range(0, valor_maximo):
-        # if c1 >= valor_maximo or c2 >= valor_maximo or c1 <= 0 or c2 <= 0:
         print("El valor ingresado está fuera de rango.")
         coord = ingresar_coordenadas(valor_maximo)
     return coord

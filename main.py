@@ -22,7 +22,5 @@ cant_movidas = jugar(mat_real, mat_incognita)
 
 # Generar archivo y terminar juego
 generar_archivo(nivel_juego, dificultad_juego, nombre_jugador, cant_movidas)
-print()
-print("¡El juego finalizó!")
-print()
-print("Se creó un archivo llamado 'Resultado Final', en el cual\npodras ver la cantidad de movimientos realizados para\ncompletar el juego. El archivo se creó en la misma dirección\ndonde se encuentra el juego")
+print("\n¡El juego finalizó!")
+print("\nSe creó un archivo llamado 'Resultado Final', en el cual\npodras ver la cantidad de movimientos realizados para\ncompletar el juego. El archivo se creó en la misma dirección\ndonde se encuentra el juego")
